@@ -13,9 +13,4 @@ This repository contains my attempts and successful solutions to various algorit
 * **Track Progress**: Monitor my journey and improvement in competitive programming.
 * **Review and Learn**: Easily revisit past problems and solutions to reinforce understanding.
 * **Share Knowledge**: Provide a resource for others who might be stuck on similar problems or want to see alternative approaches.
-
----
-
-## 📁 Repository Structure
-
-Solutions are typically organized by programming language and then by LeetCode problem number or topic. Here's a general idea of the structure:
+  

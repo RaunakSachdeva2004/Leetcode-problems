@@ -6,10 +6,15 @@ class Solution {
             slow = nums[slow];
             fast = nums[nums[fast]];
 
-            if(slow == fast)  break;
-        } while(slow != fast);
+            if(slow == fast){
+                break;
+            }
 
-        int n1 = 0, n2 = slow;
+
+        }while(slow != fast);
+
+
+        int n1 = 0, n2 =slow;
 
         while(n1 != n2){
             n1 = nums[n1];

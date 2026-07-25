@@ -9,37 +9,37 @@
  * }
  */
 class Solution {
-public ListNode reverseLL(ListNode head) {
+    public ListNode reverseLL(ListNode curr){
+        ListNode prev = null;
 
-    ListNode prev = null;
-    ListNode curr = head;
-    
-    while (curr != null) {
-        ListNode nextTemp = curr.next; // Store the next node
-        curr.next = prev;              // Reverse the link
-        prev = curr;                   // Move prev forward
-        curr = nextTemp;               // Move curr forward
+        while(curr != null){
+            ListNode next = curr.next;
+
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        return prev;
     }
-    return prev; // New head of the reversed list
-}
-
-public boolean isPalindrome(ListNode head) {
+    
+    public boolean isPalindrome(ListNode head) {
         ListNode slow = head, fast = head;
 
         while(fast != null && fast.next != null){
-            slow = slow.next ;
+            slow = slow.next;
             fast = fast.next.next;
-
         }
 
-        ListNode p1 = reverseLL(slow), p2 = head;
+        ListNode p2 = reverseLL(slow);
+        ListNode p1 = head;
 
-        while(p1 != null && p2 != null){
-            
+
+        while( p1!= null && p2 != null){
+
             if(p1.val != p2.val)  return false;
-            
             p1 = p1.next;
-            p2= p2.next;
+            p2 = p2.next;
         }
 
         return true;

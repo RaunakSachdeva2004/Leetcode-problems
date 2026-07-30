@@ -1,14 +1,9 @@
-class Solution {
+class Solution{
     public boolean checkPerfectNumber(int num) {
-        int sum = 0, og = num;
-        int i = 1;
-        while(i<num){
-            if(og%i == 0) sum = sum+i;
-
-            i++;
-
+        if (num == 6 || num == 28 || num == 496 || num == 8128 || num == 33550336) {
+            return true;
+        } else {
+            return false;
         }
-
-        return sum == num;
     }
 }
